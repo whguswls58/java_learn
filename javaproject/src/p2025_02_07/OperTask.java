@@ -33,7 +33,7 @@ public class OperTask {
 		System.out.println("max2: " + max2);
 				
 		
-		max = ( (n1 > n2) && (n1 > n3) ) ? n1 : ( n2 > n3 ) ? n2 : n3;
+		max = ( (n1 > n2) && (n1 > n3) )  ? n1 : ( n2 > n3 ) ? n2 : n3;
 		min = ( n1 < n2 && n1 < n2 ) ? n1 : ( n2 < n3 ) ? n2 : n3;
 		
 		System.out.println("최대값: " + max);
