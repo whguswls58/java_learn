@@ -1,4 +1,4 @@
-package p_250206;
+package p2025_02_06;
 
 public class PromotionExample {
 

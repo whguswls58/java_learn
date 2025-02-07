@@ -1,4 +1,4 @@
-package p_250205;
+package p2025_02_05;
 
 //java.lang 패키지 안에 들어있는 클래스는 import를 생략할 수 있다.(ex - String, System)
 
