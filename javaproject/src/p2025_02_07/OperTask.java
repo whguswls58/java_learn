@@ -13,6 +13,8 @@ public class OperTask {
 		
 		int n1, n2, n3;			// 입력받을 값 3개
 		int max, min;			// 최대값, 최소값
+		int max2, min2;
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -21,15 +23,23 @@ public class OperTask {
 		n2 = sc.nextInt();
 		n3 = sc.nextInt();
 		
-		max = ( n1 > n2 && n1 > n3) ? n1 : ( n2 > n3 ) ? n2 : n3;
-		min = ( n1 < n2 && n1 < n2) ? n1 : ( n2 < n3 ) ? n2 : n3;
+		System.out.println("n1: " + n1);
+		System.out.println("n2: " + n2);
+		System.out.println("n3: " + n3);
+		
+		max2 = (n1 > n2) ? n1 : n2;
+		System.out.println("max2: " + max2);
+		max2 = max2 > n3 ? max2 : n3;
+		System.out.println("max2: " + max2);
+				
+		
+		max = ( (n1 > n2) && (n1 > n3) ) ? n1 : ( n2 > n3 ) ? n2 : n3;
+		min = ( n1 < n2 && n1 < n2 ) ? n1 : ( n2 < n3 ) ? n2 : n3;
 		
 		System.out.println("최대값: " + max);
 		System.out.println("최소값: " + min);
 		
-		
-		
-		
+						
 		
 	}
 
