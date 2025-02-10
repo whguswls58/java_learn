@@ -7,7 +7,7 @@ public class If05 {
 		
 		System.out.println("E = " + Math.E);			// E값
 		System.out.println("PI = " + Math.PI);			// PI값
-		System.out.println("난수 = " + Math.random());				// 난수발생
+		System.out.println("난수 = " + Math.random());	// 난수발생
 		
 		// 주사위 번호 뽑기 : 1 ~ 6
 		int num = (int) (Math.random() * 6) + 1;
