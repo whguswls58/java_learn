@@ -21,18 +21,18 @@ public class IfTask {
 		n3 = sc.nextInt();
 		
 		// 최대값
-		if (n1>n2 && n1>n3) {
+		if (n1>=n2 && n1>=n3) {
 			max = n1;
-		} else if(n2 > n3) {
+		} else if(n2 >= n3) {
 			max = n2;
 		} else {
 			max = n3;
 		}
 		
 		// 최소값
-		if (n1<n2 && n1<n3) {
+		if (n1<=n2 && n1<=n3) {
 			min = n1;
-		} else if(n2 < n3) {
+		} else if(n2 <= n3) {
 			min = n2;
 		} else {
 			min = n3;
