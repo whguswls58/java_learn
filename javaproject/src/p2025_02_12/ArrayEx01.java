@@ -55,10 +55,14 @@ public class ArrayEx01 {
 //						(배열에 할당될 값이 정해져 있는 경우 주로 사용)
 		
 		int[] s = {80, 90, 100};
+		int[] s2 = {80, 90, 100};
 		int[] s1 = new int[] {80, 90, 100};
 		System.out.println(s[0]);
 		System.out.println(s[1]);
 		System.out.println(s[2]);
+		System.out.println(s);
+		System.out.println("s 주소값: " + System.identityHashCode(s));
+		System.out.println("s2 주소값: " + System.identityHashCode(s2));
 		
 		System.out.println("배열의 크기:" + s.length);
 		
