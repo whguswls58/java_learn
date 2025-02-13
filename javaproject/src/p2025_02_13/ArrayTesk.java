@@ -15,31 +15,51 @@ public class ArrayTesk {
 		
 		System.out.println("정수 값 5개 입력 :");
 		Scanner sc = new Scanner(System.in);
-		for(int i=0 ; i<num.length ; i++ )
+		
+		int max = num[0];
+		int min = num[0];
+		
+		for(int i=0 ; i<num.length ; i++) {
 			num[i] = sc.nextInt();
-		
-		sc.close();
-		
-		int max = num[0];			// 최대값 초기값
-		int min = num[0];			// 최소값 초기값
-		
-		// 배열 내의 값을 모두 비교하여 구하기
-		for(int i=1; i<num.length ; i++) {
+			if(i==0) {
+				max = num[i];
+				min = num[i];
+			}
 			if(num[i] > max)
 				max = num[i];
 			if(num[i] < min)
-				min = num[i];			
+				min = num[i];
+			
 		}
+		
+//		for(int i=0 ; i<num.length ; i++ )
+//			num[i] = sc.nextInt();
+//		
+//		sc.close();
+//		
+//		int max = num[0];			// 최대값 초기값
+//		int min = num[0];			// 최소값 초기값
+//		
+//		// 배열 내의 값을 모두 비교하여 구하기
+//		for(int i=1; i<num.length ; i++) {
+//			if(num[i] > max)
+//				max = num[i];
+//			if(num[i] < min)
+//				min = num[i];			
+//		}
 		System.out.println("최대값 : " + max);
 		System.out.println("최소값 : " + min);
 		
 		System.out.println();
 		
 		// 정렬 이용해서 구하기
-		Arrays.sort(num);
+		// newNum에 num배열(객체) 복사
+		
+		int[] newNum = num.clone();
+		Arrays.sort(newNum);
 
-		System.out.println("최대값 : " + num[num.length-1]);
-		System.out.println("최소값 : " + num[0]);
+		System.out.println("최대값 : " + newNum[newNum.length-1]);
+		System.out.println("최소값 : " + newNum[0]);
 	}
 
 }
