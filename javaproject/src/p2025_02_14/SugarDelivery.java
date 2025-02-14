@@ -32,6 +32,7 @@ public class SugarDelivery {
 			}else
 				break;	
 		}
+		sc.close();
 		
 //		설탕봉지 계산할 부분
 //		sugar3 * 3 + sugar5 * 5 >= n;
