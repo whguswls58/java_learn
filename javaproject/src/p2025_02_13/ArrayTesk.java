@@ -35,7 +35,7 @@ public class ArrayTesk {
 //		for(int i=0 ; i<num.length ; i++ )
 //			num[i] = sc.nextInt();
 //		
-//		sc.close();
+		sc.close();
 //		
 //		int max = num[0];			// 최대값 초기값
 //		int min = num[0];			// 최소값 초기값
