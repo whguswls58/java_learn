@@ -17,12 +17,12 @@ public class SugarDelivery {
 //		첫째 줄에 N이 주어진다. (3 ≤ N ≤ 5000)
 //		상근이가 배달하는 봉지의 최소 개수를 출력한다.
 //		만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.
-		
+				
+//		배달할 설탕량을 입력받을 부분
 		int n;							// 배달할 설탕량 : n kg
 		
 		Scanner sc = new Scanner(System.in);
 		
-//		배달할 설탕량을 입력받을 부분
 		while(true) {
 			System.out.println("배달할 설탕량을 입력하시오.(단, 3kg이상 5000이하만 가능)");
 			n = sc.nextInt();
@@ -35,7 +35,7 @@ public class SugarDelivery {
 		
 //		설탕봉지 계산할 부분
 //		sugar3 * 3 + sugar5 * 5 >= n;
-		int total=-1;							// 정확하게 떨어지지 않으면 -1 출력
+		int total=-1;							// 설탕 봉지가 정확하게 떨어지지 않으면 -1 출력
 		int sugar3 =0, sugar5=0;				// 설탕봉지 3kg, 5kg
 
 
