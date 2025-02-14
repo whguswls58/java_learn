@@ -26,13 +26,13 @@ public class Arr04 {
 				subject[col] += score[row][col];
 			switch (col % score[0].length) {
 				case 0:
-					System.out.println("국어 점수: " + subject[col]);
+					System.out.println("국어 점수합: " + subject[col]);
 					break;
 				case 1:
-					System.out.println("영어 점수: " + subject[col]);
+					System.out.println("영어 점수합: " + subject[col]);
 					break;
 				case 2:
-					System.out.println("수학 점수: " + subject[col]);
+					System.out.println("수학 점수합: " + subject[col]);
 					break;
 				default:
 					System.out.println();
@@ -40,6 +40,7 @@ public class Arr04 {
 			}
 		}
 		
+		System.out.println();
 		System.out.println("각 학생별 총점 구하기");
 		for(int row=0; row<score.length; row++) {
 			for(int col=0; col<score[row].length; col++)
