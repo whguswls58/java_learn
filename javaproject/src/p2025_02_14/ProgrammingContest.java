@@ -1,5 +1,6 @@
 package p2025_02_14;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ProgrammingContest {
@@ -54,16 +55,55 @@ public class ProgrammingContest {
 			}
 			System.out.print("대회 시행 주(1~13) : ");
 			week = sc.nextInt();
-			budget = sc.nextInt();
 			if(week<1 || week>13) {
 				System.out.println("다시 입력해주세요.");
 				continue;
 			}
 			break;			
 		}
+		sc.close();
 		
-		int hotel_price;				// 숙박비용 1~10000
-		int[] guest_num = new int[13];	// 투숙 가능 인원 1~1000
+		System.out.println();
+		
+		int[] hotel_price = new int[hotel];				// 숙박비용 1~10000
+		int[] guest_num = new int[hotel];					// 투숙 가능 인원 1~1000
+		Random random = new Random();
+		
+		for(int i=0; i<guest_num.length; i++) {
+			guest_num[i] = random.nextInt(1001);		// 투숙인원 랜덤으로 추출
+			hotel_price[i] = (random.nextInt(5000)+1)/100*100 + 5000;	// 숙박비용 랜덤으로 선정
+			System.out.println((i+1) + "번째 호텔 투숙가능 인원: " + guest_num[i] + "\t 투숙비용: " + hotel_price[i]);
+		}
+		
+		System.out.println();
+		
+		// 인원수(n) * 투숙비용(hotel_price[i]) <= 대회예산 (budget)
+		int min = hotel_price[0] * n;
+		int hotel_num = 1;
+		for(int i=0; i<hotel_price.length; i++) {
+			if(budget >= n * hotel_price[i] && n <= guest_num[i]) {
+				if(min >= n * hotel_price[i]) {
+					min = n * hotel_price[i];
+					hotel_num = i;
+				}
+			}
+		}
+		System.out.println();
+		
+		System.out.println("대회 필요 예산: " +  min);
+		System.out.println("대회 예산 : " + budget);
+		
+		System.out.println();
+		
+		if(min <= budget) {
+			System.out.println("대회 참가인원: " + n);
+			System.out.println("1인당 숙박 비용 : " + hotel_price[hotel_num]);	// 투숙가능 할 경우 투숙비용 최소값 일때를 골라야함.
+			System.out.println("대회 개최금액: " + min);
+			System.out.println("대회 개최호텔: " + (hotel_num+1) + "번째 호텔");
+			System.out.println("대회 시행 주: " + week + "째 주");
+		}else {
+			System.out.println("예산 부족.. stay home...");
+		}
 		
 	}
 
