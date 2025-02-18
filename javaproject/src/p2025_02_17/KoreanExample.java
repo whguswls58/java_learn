@@ -1,4 +1,4 @@
-package p2025_02_15;
+package p2025_02_17;
 
 class Korean{
 	String nation = "대한민국";
