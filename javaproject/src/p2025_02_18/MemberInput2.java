@@ -79,6 +79,8 @@ public class MemberInput2 {
 				break;
 			}
 		}
+		sc.close();
+		
 		System.out.println();
 		
 		for(int j = 0; j < i; j++) {
