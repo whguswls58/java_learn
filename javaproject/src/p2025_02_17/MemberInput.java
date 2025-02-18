@@ -71,8 +71,9 @@ public class MemberInput {
 		while(true) {
 			System.out.println("회원 정보를 입력버튼 : 1");
 			System.out.println("종료 : 2");
-			num = sc.nextInt();
-			sc.nextLine();
+			
+			num = sc.nextInt();				// nextInt는 enter를 받을수 없어서 그냥 입력할 경우 다음 scan 구문에 enter값이 입력됨
+			sc.nextLine();					// 값을 연속해서 받기 위해 엔터값을 받아줄 nextLine 추가
 			
 			if(num == 1) {					// 회원정보 입력
 				// 회원정보 입력받을 공간
