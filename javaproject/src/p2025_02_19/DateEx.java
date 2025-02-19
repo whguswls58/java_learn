@@ -23,9 +23,14 @@ public class DateEx {
 		// HH : 24시간제 시간
 		System.out.println(sd.format(d));
 		
-		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		// 2. Timestamp - 정밀한 날짜, 시간을 처리하는 클래스
+		// 년, 월, 일, 시, 분, 초로 날짜를 출력
+		
+		// Timestamp 객체 만드는 법 다시 한번 보기 - 라이브러리 참고
 		Timestamp ts = new Timestamp(System.currentTimeMillis());
 		System.out.println(ts);
+		// SimpleDateFormat으로 원하는 포맷으로 바꿔 사용
+		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd a HH:mm:ss");
 		System.out.println(sf.format(ts));
 		
 	}
