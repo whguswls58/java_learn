@@ -3,7 +3,7 @@ package p2025_02_19;
 class FinalMember {
   final int a=10;		// 상수
   public void setA(int a){
-    this.a=a;			// 상수는 값을 수정할 수 없음 -> 오류 발생
+//    this.a=a;			// 상수는 값을 수정할 수 없음 -> 오류 발생
   }
 }
 

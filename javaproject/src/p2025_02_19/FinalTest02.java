@@ -14,10 +14,10 @@ class FinalEx extends FinalMethod{  	// 자식 클래스
   public void setA(int a) {
     this.a=a;
    }
-  public void setStr(String s) { // 메소드 오버라이딩
-    str+=s;
-    System.out.println(str);
-  }
+//  public void setStr(String s) { // 메소드 오버라이딩
+//    str+=s;
+//    System.out.println(str);
+//  }
 
 }
 public class FinalTest02{
