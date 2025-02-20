@@ -11,6 +11,7 @@ public class SubStringEX {
 		
 		String gender = ssn.substring(7,8);
 		
+		// substring()의 결과는 문자열(참조형) -> equals 메소드로 값 비교
 		if(gender.equals("1") || gender.equals("3")) {
 			System.out.println("남자");
 		}else if(gender.equals("2") || gender.equals("4")){
@@ -21,6 +22,7 @@ public class SubStringEX {
 		
 		System.out.println("=====================");
 		
+		// charAt()의 결과는 기본자료형 -> == (비교연산자)로 값 비교
 		if(ssn.charAt(7) == '1' || ssn.charAt(7) == '3') {
 			System.out.println("남자");
 		}else if(ssn.charAt(7) == '2' || ssn.charAt(7) == '4') {
