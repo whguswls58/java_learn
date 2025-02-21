@@ -1,4 +1,4 @@
-package p2025_02_20;
+package p2025_02_21;
 
 public class SplitEx1 {
 
