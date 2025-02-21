@@ -11,6 +11,7 @@ public class GitTest {
 		// pull 해준후 push 시행
 		System.out.println("잔디가 잘 심겼으면 좋겠다.");
 		System.out.println("잔디가 잘 심겼으면 좋겠다.2");
+		System.out.println("커밋테스트");
 		
 	}
 
