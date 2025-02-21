@@ -13,6 +13,7 @@ public class GitTest {
 		System.out.println("잔디가 잘 심겼으면 좋겠다.2");
 		System.out.println("커밋테스트");
 		System.out.println("커밋테스트2");
+		System.out.println("커밋테스트3");
 		
 	}
 
