@@ -38,8 +38,7 @@ public class JuminCheckTesk {
 						System.out.println("여자입니다.");
 						break;
 					}	
-				}
-				else {
+				}else {
 					System.out.println("타당하지 않은 번호입니다. 번호를 똑바로 입력하세요.");
 					System.out.println("=========================================");
 				}		
@@ -60,7 +59,7 @@ public class JuminCheckTesk {
 		// digits[] = 주민번호 앞자리 int 배열		
 		int[] digits = new int[jumin1.length()];
 		for (int i = 0; i < jumin1.length(); i++) {
-			digits[i] = jumin1.charAt(i) - '0';
+			digits[i] = jumin1.charAt(i) - '0';		// charAt() - char형 리턴하므로 '0'을 빼줘야 int 정수형값으로 됨
 		}
 		
 		// 주민번호 타당성 검사
