@@ -10,6 +10,7 @@ public class GitTest {
 		// master 변경사항을 pull 하지 않은 상태로 push하면 충돌남!!
 		// pull 해준후 push 시행
 		System.out.println("잔디가 잘 심겼으면 좋겠다.");
+		System.out.println("잔디가 잘 심겼으면 좋겠다.2");
 		
 	}
 
