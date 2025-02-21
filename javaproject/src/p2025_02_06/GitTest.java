@@ -14,6 +14,7 @@ public class GitTest {
 		System.out.println("커밋테스트");
 		System.out.println("커밋테스트2");
 		System.out.println("커밋테스트3");
+		System.out.println("커밋테스트4 real last");
 		
 	}
 
