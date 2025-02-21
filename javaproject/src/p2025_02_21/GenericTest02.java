@@ -15,14 +15,29 @@ class TestClass1 {
 class GenericTest02 {
 	public static void main(String[] args) {
 		TestClass1 obj01 = new TestClass1();
+		
+		// Object value = 3;		-> 업캐스팅 + 자동박싱
 		obj01.setValue(3);
 		System.out.println("되돌리는 값은->" + obj01.getValue());
 
+		// 다운캐스팅 + 언박싱
+		int n = ((Integer)(obj01.getValue())).intValue();
+		System.out.println(n);
+		
+		// Object value = 3.4;
 		obj01.setValue(3.4);
 		System.out.println("되돌리는 값은->" + obj01.getValue());
-
+		
+		// 다운캐스팅 + 언박싱
+		double d = ((Double)(obj01.getValue())).doubleValue();
+		System.out.println(d);
+		
+		// Object value = "이해할 수 있다.";
 		obj01.setValue("이해할 수 있다.");
 		System.out.println("되돌리는 값은->" + obj01.getValue());
 
+		// 다운캐스팅
+		String s = (String)(obj01.getValue());
+		System.out.println(s);
 	}
 }
