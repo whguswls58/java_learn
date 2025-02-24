@@ -60,6 +60,8 @@ public class JuminCheckTesk {
 		int[] digits = new int[jumin1.length()];
 		for (int i = 0; i < jumin1.length(); i++) {
 			digits[i] = jumin1.charAt(i) - '0';		// charAt() - char형 리턴하므로 '0'을 빼줘야 int 정수형값으로 됨
+//			digits[i] = Character.getNumericValue(jumin1.charAt(i));	// char to int 이게 좀더 깔끔함
+//			Integer.parseInt(jumin1.substring(i,i+1))	// 문자열 i이상 i+1미만 문자열로 자른다 -> string형 1글자씩 추출
 		}
 		
 		// 주민번호 타당성 검사
@@ -77,16 +79,13 @@ public class JuminCheckTesk {
 		
 		// 타당하면 true 반환, 타당하지 않으면 false 반환
 		if(11 - sum >= 10) {
-			sum = sum % 10;
-			if(checkNum != sum)
-				return false;
-			else 
-				return true;
-		}else {
-			if(checkNum != sum)
-				return false;
-			else 
-				return true;
-		}		
+			sum = sum % 10;	
+		}
+		
+		if(checkNum != sum)
+			return false;
+		else 
+			return true;
+				
 	}
 }
