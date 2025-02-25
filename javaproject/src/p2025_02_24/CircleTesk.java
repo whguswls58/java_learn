@@ -29,7 +29,10 @@ public class CircleTesk {
 		System.out.println("=======================");
 		
 		// DecimalFormat 사용하여 소숫점 둘째자리까지 출력
-		DecimalFormat df = new DecimalFormat("#.##");
+		// 0 패턴 : 빈자리는 0으로 채움
+		// # 패턴 : 빈자리는 채우지 않는다
+		
+		DecimalFormat df = new DecimalFormat("#.00");
 		
 		System.out.println("원둘레: " + df.format(circumference));
 		System.out.println("원면적: " + df.format(circleArea));
