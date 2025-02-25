@@ -19,7 +19,7 @@ public class CircleTesk {
 		double circumference = 2 * Math.PI * r;				// 원주
 		double circleArea = Math.PI * Math.pow(r, 2);		// 원면적
 		double surface = 4 * Math.PI * Math.pow(r, 2);		// 표면적
-		double volume = 4/3 * Math.PI * Math.pow(r, 3);		// 부피
+		double volume = (double)4/3 * Math.PI * Math.pow(r, 3);		// 부피
 		
 		//printf 포맷을 사용하여 소숫점 둘째자리까지 출력
 		System.out.printf("원둘레: %.2f\n", circumference);
