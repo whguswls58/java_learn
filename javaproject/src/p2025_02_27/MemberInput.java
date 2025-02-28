@@ -44,6 +44,7 @@ public class MemberInput {
 
 				if (s.equals("N") || s.equals("n")) {
 					System.out.println("회원 입력을 종료하였습니다.");
+					sc.close();
 					break;
 				} else if (s.equals("Y") || s.equals("y")) {
 					continue;
@@ -69,13 +70,12 @@ public class MemberInput {
 					} else {
 						System.out.println("잘못된 값을 입력하셨습니다. 다시 입력하세요.");
 					}
-				}		
+				}
 			}
 			
 		} while (true);
 
 		print(member);
-
 	}
 	
 	public static void print(List<MemberInfo> member) {
