@@ -17,7 +17,8 @@ public class DivideZeroExceptionHandling2 {
 		} catch (Exception e) {
 			// java.lang.Throwable의 메소드
 			// 예외 정보를 자세히 출력
-			e.printStackTrace();
+			e.printStackTrace();						// 출력기능이 내장된 메소드(return 값은 void)
+//			System.out.println(e.printStackTrace());	// 오류 발생
 
 			// 예외 정보를 문자열로 반환함.
 			System.out.println(e.getMessage());
