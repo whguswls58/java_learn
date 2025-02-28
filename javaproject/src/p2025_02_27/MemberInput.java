@@ -1,6 +1,7 @@
 package p2025_02_27;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -47,13 +48,28 @@ public class MemberInput {
 				} else if (s.equals("Y") || s.equals("y")) {
 					continue;
 				} else {
-					System.out.println("잘못된 값을 입력하셨습니다. 입력을 종료합니다.");
-					break;
+					System.out.println("잘못된 값을 입력하셨습니다.");
+					throw new Exception();
 				}
-			} catch (Exception e) {
+			} catch (InputMismatchException e) {
 				System.out.println("나이는 정수 값만 입력해주세요.");
 				sc.nextLine();
+			} catch(Exception e) {
+				while(true) {
+					System.out.println("추가 입력 하시겠습니까? Y/N");
+					String s = sc.nextLine();
+
+					if (s.equals("N") || s.equals("n")) {
+						System.out.println("회원 입력을 종료하였습니다.");
+						return;
+					} else if (s.equals("Y") || s.equals("y")) {
+						break;
+					} else {
+						System.out.println("잘못된 값을 입력하셨습니다. 다시 입력하세요.");
+					}
+				}		
 			}
+			
 		} while (true);
 
 		System.out.println("===============================");
