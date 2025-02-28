@@ -51,6 +51,7 @@ public class MemberInput {
 					System.out.println("잘못된 값을 입력하셨습니다.");
 					throw new Exception();
 				}
+
 			} catch (InputMismatchException e) {
 				System.out.println("나이는 정수 값만 입력해주세요.");
 				sc.nextLine();
@@ -61,6 +62,7 @@ public class MemberInput {
 
 					if (s.equals("N") || s.equals("n")) {
 						System.out.println("회원 입력을 종료하였습니다.");
+						print(member);
 						return;
 					} else if (s.equals("Y") || s.equals("y")) {
 						break;
@@ -72,6 +74,11 @@ public class MemberInput {
 			
 		} while (true);
 
+		print(member);
+
+	}
+	
+	public static void print(List<MemberInfo> member) {
 		System.out.println("===============================");
 		System.out.println("회원정보 출력");
 
@@ -87,7 +94,6 @@ public class MemberInput {
 			System.out.println();
 
 		}
-
 	}
 
 }
