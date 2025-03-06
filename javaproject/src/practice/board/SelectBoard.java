@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 
 public class SelectBoard {
 	// DB_Select Data from Board -> 메소드 오버로딩 활용(작성자만 출력, 작성자+글제목만 출력 등등등)
-	public void BoardSelect() {
+	public void boardSelect() {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 
@@ -25,9 +25,10 @@ public class SelectBoard {
 			con = DriverManager.getConnection(url, "scott", "tiger");
 
 			// ---JDBC_Select 추가된 내용 -------
-			sql = "SELECT * FROM board";
+			// 글목록, 작성자, 글내용, 작성시간
+			sql = "SELECT no, subject, writer, content, reg_date FROM board";
 
-			System.out.printf("번호 \t 작성자 \t\t 비밀번호 \t\t 제목 \t\t 내용\t\t 날짜\n");
+			System.out.printf("번호 \t 작성자 \t 제목 \t\t 내용\t\t 날짜\n");
 			System.out.printf("------------------------------------------------------------------------------\n");
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery(); // 얻어진 레코드를 가져옴
@@ -38,12 +39,11 @@ public class SelectBoard {
 			while (rs.next()) {
 				dto.setNo(rs.getInt("no"));
 				dto.setWriter(rs.getString("writer"));
-				dto.setPasswd(rs.getString("passwd"));
 				dto.setSubject(rs.getString("subject"));
 				dto.setContent(rs.getString("content"));
 				dto.setTs(rs.getTimestamp("reg_date"));
-				System.out.printf(" %d \t %s \t %s \t %s\t %s\t %s\t  \n", dto.getNo(), dto.getWriter(),
-						dto.getPasswd(), dto.getSubject(), dto.getContent(), sd.format(dto.getTs()));
+				System.out.printf(" %d \t %s \t %s\t\t %s\t\t %s\t \n", dto.getNo(), dto.getWriter(),
+						 dto.getSubject(), dto.getContent(), sd.format(dto.getTs()));
 			}
 		} catch (Exception e) {
 			System.out.println("데이터베이스 연결 실패!");

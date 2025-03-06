@@ -34,5 +34,17 @@ create sequence customer_no_seq
 		start with 1				-- 시작값
 		increment by 1;				-- 증가치(감소는 되지않음, 중복도 발생하지 않음)
 
+create table board(
+	no number primary key,
+	writer varchar2(20) not null,
+	passwd varchar2(20) not null,
+	subject varchar2(100) not null,
+	content varchar2(1000) not null,
+	reg_date timestamp );
+
+create sequence board_seq
+	start with 1
+	increment by 1;
 
 
+select * from board;
