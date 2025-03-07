@@ -34,6 +34,10 @@ create sequence customer_no_seq
 		start with 1				-- 시작값
 		increment by 1;				-- 증가치(감소는 되지않음, 중복도 발생하지 않음)
 
+		
+-- 예2. 게시판
+-- primary key(기본키) : 반드시 중복되지 않는 값을 저장해야 하는  의미를 가진 제약조건
+-- not null : null 값을 허용하지 않는다. 반드시 값을 입력해야된다는 의미를 가진 제약조건
 create table board(
 	no number primary key,
 	writer varchar2(20) not null,
