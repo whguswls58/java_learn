@@ -47,7 +47,16 @@ public class DeleteBoard {
 			System.out.println("데이터베이스 연동 실패");
 			e.printStackTrace();
 		} finally {
-			
+			try {
+				if(br != null)
+					br.close();
+				if(pstmt != null)
+					pstmt.close();
+				if(con != null)
+					con.close();
+			} catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
 		}
 		
 	}
